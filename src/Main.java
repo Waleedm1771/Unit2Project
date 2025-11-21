@@ -5,17 +5,15 @@ public class Main
     public static void main(String[] args) throws InterruptedException {
 
         Scanner scan = new Scanner(System.in);
-        int game = 0;
+        int game;
         System.out.println("\nWhat game would you like to play? Type: ");
         System.out.println("1: Rock Paper Scissors");
         System.out.println("2: Tic Tac Toe");
         System.out.println("3: Hide and Seek\n");
         game = scan.nextInt();
         while (game != 1 && game != 2 && game != 3) {
-            if (game != 1 && game != 2 && game != 3) {
-                System.out.println("\nThat's not a valid game!");
-                System.out.println("Type 1, 2, or 3.\n");
-            }
+            System.out.println("That's not a valid game!");
+            System.out.println("Type 1, 2, or 3.\n");
             game = scan.nextInt();
         }
         if (game == 1) {
@@ -29,21 +27,21 @@ public class Main
 
     public static void RockPaperScissors() throws InterruptedException {
         Scanner scan = new Scanner(System.in);
-        int rounds = 0;
+        int rounds;
         System.out.println("\nYou chose Rock Paper Scissors! I'm sure you know how to play, but I'll explain just in case.");
         Thread.sleep(2000);
         System.out.println("- Choose either Rock, Paper, or Scissors, and I'll do the same.\n- Paper beats Rock, Rock beats Scissors, and Scissors beats Paper.");
         Thread.sleep(2000);
-        System.out.println("- If it's a tie, then we go again.\n- Finally, choose the amount of rounds, and we'll play!\n");
+        System.out.println("- If it's a tie, then we both get a point.\n- Finally, choose the amount of rounds, and we'll play!\n");
         Thread.sleep(1000);
         System.out.print("Amount of Rounds: ");
         rounds = scan.nextInt();
-        RockPaperScissors game = new RockPaperScissors(rounds);
         System.out.println("\n Great! Let's play!\n");
-        System.out.println("Ready? When I say \"Shoot\" then type \"Rock\", \"Paper\", or \"Scissors\"\n");
-        Thread.sleep(3000);
-        for (int i = 0; i<rounds; i++) {
-            game.play(scan.nextLine(), i);
+        System.out.println("When I say \"Shoot\", then type \"Rock\", \"Paper\", or \"Scissors\"\n");
+        Thread.sleep(1000);
+        for (int i = 1; i<=rounds; i++) {
+            RockPaperScissors.play(i);
+            Thread.sleep(2000);
         }
 
     }
@@ -55,6 +53,21 @@ public class Main
 
     public static void HideAndSeek() {
         Scanner scan = new Scanner(System.in);
-
+        System.out.println("     O\n    /|\\\n    / \\");
+        System.out.println("   _____\n  /     \\\n /       \\\n/_________\\\n\\_________/");
+        String a = "   _____\n  /     \\\n /       \\\n/_________\\\n\\_________/\n";
+        String b = "     O\n    /|\\\n    / \\\n";
+        String c = "\n\n\n\n";
+        System.out.println(a + b);
+        System.out.println(a);
+        System.out.println(a);
+        System.out.println("\n\n\n\n\n");
+        System.out.println(a);
+        System.out.println(a + b);
+        System.out.println(a);
+        System.out.println("\n\n\n\n\n");
+        System.out.println(a);
+        System.out.println(a);
+        System.out.println(a + b);
     }
 }
