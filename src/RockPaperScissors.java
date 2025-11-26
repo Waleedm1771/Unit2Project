@@ -32,13 +32,13 @@ public class RockPaperScissors {
             answer = scan.nextLine();
         }
         System.out.println("I choose " + hand + "!\n");
-            if (answer.equalsIgnoreCase("Rock")){
-                answer1 = 1;
-            } else if (answer.equalsIgnoreCase("Paper")){
-                answer1 = 2;
-            } else if (answer.equalsIgnoreCase("Scissors")){
-                answer1 = 3;
-            }
+        if (answer.equalsIgnoreCase("Rock")){
+            answer1 = 1;
+        } else if (answer.equalsIgnoreCase("Paper")){
+            answer1 = 2;
+        } else if (answer.equalsIgnoreCase("Scissors")){
+            answer1 = 3;
+        }
 
         if (answer1 == rand) {
             System.out.println("It was a tie!\n");
@@ -65,4 +65,3 @@ public class RockPaperScissors {
     }
 
 }
-
