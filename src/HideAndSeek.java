@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class HideAndSeek {
 
+    static int playerScore = 0;
+    static int gameScore = 0;
+
     public static int play (int round) throws InterruptedException {
         Scanner scan = new Scanner(System.in);
         int rand = (int) (Math.random() * 3 + 1);
@@ -33,7 +36,7 @@ public class HideAndSeek {
             rand = (int) (Math.random() * 3 + 1) ;
             Thread.sleep(3000);
             System.out.println(c + a + a + a);
-            System.out.println("\n\nGuess which cup I'm in!");
+            System.out.println("\n\n Alright, now guess which cup I'm in!");
             System.out.println("Cup 1, 2, or 3!");
             guess = scan.nextInt();
 
@@ -57,3 +60,4 @@ public class HideAndSeek {
     }
 
 }
+

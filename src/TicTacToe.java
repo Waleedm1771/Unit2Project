@@ -20,11 +20,14 @@ public class TicTacToe {
             System.out.println("The bot will always go first, because it's pretty dumb.");
             Thread.sleep(1500);
         }
-         // MAKE WHILE TURN LOOP
-        
+        // MAKE WHILE TURN LOOP
+
         int rand = (int) (Math.random() * 9);
         int remove = squares[rand];
 
+        while (!contains(rand, squares)) {
+            rand = (int) (Math.random() * 9);
+        }
         if (contains(rand, squares)) {
             int[] newList = new int[squares.length - 1];
             int j = 0;
